@@ -38,7 +38,7 @@ scene("game", () => {
     // add lava 2
     add([
         rect(50, height() + 1000),
-        pos(0, 0),
+        pos(0, -500),
         outline(4),
         area(),
         color(127, 0, 0),
