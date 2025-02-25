@@ -1,5 +1,4 @@
-import kaplay from "kaplay";
-const JUMP_FORCE = 1000;
+import kaplay from "https://unpkg.com/kaplay@3000.1.17/dist/kaboom.mjs"
 const SCALE = 0.3
 
 const k = kaplay({
