@@ -1,5 +1,6 @@
 import kaplay from "https://unpkg.com/kaplay@3000.1.17/dist/kaboom.mjs"
 const SCALE = 0.3
+let SPEED = 500
 
 const k = kaplay({
     width: 1280,
@@ -86,12 +87,14 @@ scene("game", () => {
             pos(width(), rand(300, 600)),
             anchor("botleft"),
             color(255, 180, 255),
-            move(LEFT, 540),
+            move(LEFT, SPEED),
             offscreen({ destroy: true }),
             "platform"
         ]);
 
         wait(rand(0.3, 1), spawnPlatform);
+
+        SPEED = SPEED + 5
     };
 
     spawnPlatform();
